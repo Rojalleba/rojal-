@@ -1,0 +1,134 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+$primary-color: white;
+$secondary-color: cyan;
+$background-gradient: linear-gradient(135deg, #0d0d22, #1a1a40);
+$glass-bg: rgba(255, 255, 255, 0.1);
+$blur-effect: blur(10px);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: $background-gradient;
+    color: $primary-color;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: $blur-effect;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+
+    li {
+        margin: 0 15px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: 400;
+        transition: 0.3s;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    button {
+        background: transparent;
+        border: 2px solid $primary-color;
+        padding: 8px 15px;
+        color: $primary-color;
+        margin-left: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .signup {
+        background: $secondary-color;
+        border: none;
+        color: black;
+        font-weight: 600;
+        &:hover {
+            background: $primary-color;
+        }
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-top: 15px;
+    }
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stat {
+    background: $glass-bg;
+    backdrop-filter: $blur-effect;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 255, 255, 0.2);
+    transition: 0.3s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
